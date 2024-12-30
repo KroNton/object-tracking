@@ -39,7 +39,7 @@ jobs:
       # Step 5: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -f docker/jetpack4/Dockerfile \
+          docker build -f docker/jetpack4-base/Dockerfile \
             -t ghcr.io/kronton/${{ github.event.repository.name }}-base-image:${{ github.event.inputs.image_tag_version }} .
         env:
           DOCKER_BUILDKIT: 1  # Enable BuildKit for advanced Docker builds
